@@ -1,36 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Onlembeh King Black</title>
-    <link rel="stylesheet" href="styles.css"/>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onlembeh King Black</title>
+  <style>
+    body { background-color: #1e1e1e; color: #f4f4f4; font-family: sans-serif; padding: 20px; }
+    .container { max-width: 500px; margin: auto; background: #333; padding: 20px; border-radius: 10px; }
+    input, button { width: 100%; padding: 10px; margin-top: 10px; }
+    .brown { background: #8B4513; color: white; }
+  </style>
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="app.js"></script>
 </head>
 <body>
-    <div class="auth">
-        <h1>Onlembeh King Black</h1>
-        <input type="email" id="email" placeholder="Email" />
-        <input type="password" id="password" placeholder="Password" />
-        <button onclick="login()">Login</button>
-        <button onclick="signup()">Signup</button>
-    </div>
-
-    <div class="dashboard" style="display:none;">
-        <h2>Welcome to the Dashboard</h2>
-        <p id="adminPanel" style="display:none;">Admin Settings Panel</p>
-        <input type="text" id="searchBox" placeholder="Search services..." onkeyup="searchService()" />
-        <ul id="serviceList">
-            <li>Networking</li>
-            <li>System Maintenance</li>
-            <li>Server Configuration</li>
-            <li>Windows Installation</li>
-            <li>Security</li>
-        </ul>
-        <button onclick="logout()">Logout</button>
-    </div>
-    <script src="firebase-config.js"></script>
-    <script src="firebase-app.js"></script>
+  <div class="container">
+    <h2>Onlembeh Login</h2>
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+    <button class="brown" onclick="login()">Login</button>
+    <button onclick="register()">Register</button>
+    <hr />
+    <input type="text" placeholder="Search..." />
+  </div>
 </body>
 </html>
